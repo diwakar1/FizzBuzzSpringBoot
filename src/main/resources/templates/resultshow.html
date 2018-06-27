@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h2> Fizz Buzz Result</h2>
+<a href = "/"> Do again </a>
+<div th:each="result:${show}">
+
+    <p th:inline="text"> [[${result}]]</p>
+</div>
+</body>
+</html>

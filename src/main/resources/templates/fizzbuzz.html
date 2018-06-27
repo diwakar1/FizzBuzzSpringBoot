@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>fizzbuzz</title>
+</head>
+<body>
+
+<form action = "#"
+    th:action="@{/process}"
+      th:object="${fizzbuzz}"
+      method = "post">
+    <div class = "row">
+        <div class="col-sm-12 col md-6">
+            <label> enter your number</label>
+        <input type="number" th:field="*{startNumber}"> </input>
+            <span th:if="${#fields.hasErrors('startNumber')}"
+                  th:errors="*{startNumber}"></span>
+        </div>
+        <div class="col-sm-12 col-md-6">
+           <label> Enter End number</label>
+            <input type="number" th:field="*{endNumber}" > </input>
+            <span th:if="${#fields.hasErrors('endNumber')}"
+                 th:errors="*{endNumber}"></span>
+
+        </div>
+    </div>
+    <input type="submit" value = "Submit"> </input>
+
+
+</form>
+</body>
+</html>
